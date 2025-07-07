@@ -1,0 +1,1 @@
+{% docs comment %} This is a comment text for demo in the training {% enddocs %}
