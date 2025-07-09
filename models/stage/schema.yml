@@ -47,7 +47,7 @@ models:
     description: staging layer for customers data
     columns:
       - name: customer_id
-        description: primary id of the model
+        description: '{{doc("prkey")}}'
         tests:
           - unique
           - not_null
@@ -61,6 +61,9 @@ models:
         description: phone number of the customer
       - name: account_balance
         description: total account balance from the customer
+        tests:
+         - lesservalues:
+              pk_name: customer_id
       - name: market_segment
         description: market segment of the customer
       - name: comment

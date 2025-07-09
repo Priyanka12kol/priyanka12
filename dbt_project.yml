@@ -43,4 +43,9 @@ models:
       transient: false
       
       stg_nations:
-        +materialized: view
+        +materialized: table
+    intermediate:
+      +materialized: table
+      int_nations:
+        +materialized: incremental
+        
