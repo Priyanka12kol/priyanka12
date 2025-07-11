@@ -41,7 +41,8 @@ models:
     stage:
       +materialized: table
       transient: false
-      
+      stg_customers:
+        +materialized: table      
       stg_nations:
         +materialized: table
     intermediate:
